@@ -17,11 +17,12 @@ def convert():
 
 def print_names():
     for _, filename in enumerate(os.listdir(f'{folder}_renamed')):
-        print(f'"{filename}",')
+        if ".jpeg" in filename:
+            print(f'"{filename}",')
 
 
 if __name__ == '__main__':
     print("Copy the example files to photos folder to test")
     folder = "photos"
-    convert()
+    #convert()
     print_names()
